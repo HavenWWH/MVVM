@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  MVVM
+//
+//  Created by Haven on 2017/7/12.
+//  Copyright © 2017年 com.RuanZhiHongYi. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+//全局宏
+#import "UtilsMacros.h"
+#import "URLMacros.h"
+#import "ThirdMacros.h"
+#import "CommonMacros.h"
+
+//基础类
+#import "AppDelegate.h"
+#import <ZYTool/ZYTool.h>
+
+//分类
+#import "UIView+extension.h"
+#import "AppDelegate+AppService.h"
+
+//工具类
+#import "Utils.h"
+
+#endif /* PrefixHeader_pch */
