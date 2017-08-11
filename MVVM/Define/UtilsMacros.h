@@ -18,7 +18,7 @@
 #define kNotificationCenter  [NSNotificationCenter defaultCenter]
 
 //获取屏幕宽高
-#define KScreenWidth ([[UIScreen mainScreen] bounds].size.width)
+#define KScreenWidth  [[UIScreen mainScreen] bounds].size.width
 #define KScreenHeight [[UIScreen mainScreen] bounds].size.height
 #define kScreen_Bounds [UIScreen mainScreen].bounds
 
@@ -45,6 +45,10 @@
 [View.layer setMasksToBounds:YES];\
 [View.layer setBorderWidth:(Width)];\
 [View.layer setBorderColor:[Color CGColor]]
+
+
+// 轮播图,HeaderView视图比例
+#define viewScale 1.34
 
 //颜色 color
 #define RGBAColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]

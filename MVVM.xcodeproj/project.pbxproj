@@ -66,8 +66,24 @@
 		81C034311F175116005EEDDE /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C034301F175116005EEDDE /* UserManager.m */; };
 		81C034341F17561C005EEDDE /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C034331F17561C005EEDDE /* BaseViewController.m */; };
 		81C034371F17703A005EEDDE /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C034361F17703A005EEDDE /* User.m */; };
+		81D1DACB1F3AA55000FC4B3E /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D1DAC91F3AA55000FC4B3E /* MyViewController.m */; };
+		81D1DACC1F3AA55000FC4B3E /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D1DACA1F3AA55000FC4B3E /* MyViewController.xib */; };
 		81D376641F31A3A100BB36C5 /* ClickMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D376621F31A3A100BB36C5 /* ClickMeViewController.m */; };
 		81D376651F31A3A100BB36C5 /* ClickMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D376631F31A3A100BB36C5 /* ClickMeViewController.xib */; };
+		81E13E6F1F3D3978009ECE54 /* CellHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E13E5F1F3D3978009ECE54 /* CellHeaderView.m */; };
+		81E13E701F3D3978009ECE54 /* CellHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E13E601F3D3978009ECE54 /* CellHeaderView.xib */; };
+		81E13E731F3D3978009ECE54 /* HavenMyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E13E651F3D3978009ECE54 /* HavenMyTableView.m */; };
+		81E13E741F3D3978009ECE54 /* HavenNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E13E671F3D3978009ECE54 /* HavenNavigationBar.m */; };
+		81E13E751F3D3978009ECE54 /* HavenNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E13E681F3D3978009ECE54 /* HavenNavigationBar.xib */; };
+		81E13E761F3D3978009ECE54 /* HavenTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E13E6A1F3D3978009ECE54 /* HavenTableViewCell.m */; };
+		81E13E771F3D3978009ECE54 /* HavenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E13E6B1F3D3978009ECE54 /* HavenTableViewCell.xib */; };
+		81E13E781F3D3978009ECE54 /* MyViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E13E6E1F3D3978009ECE54 /* MyViewControllerViewModel.m */; };
+		81E13E851F3D4CF6009ECE54 /* DTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E13E831F3D4CF6009ECE54 /* DTViewController.m */; };
+		81E13E861F3D4CF6009ECE54 /* DTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E13E841F3D4CF6009ECE54 /* DTViewController.xib */; };
+		81E13E8A1F3D4D04009ECE54 /* WZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E13E881F3D4D04009ECE54 /* WZViewController.m */; };
+		81E13E8B1F3D4D04009ECE54 /* WZViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E13E891F3D4D04009ECE54 /* WZViewController.xib */; };
+		81E13E8F1F3D4D15009ECE54 /* XHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E13E8D1F3D4D15009ECE54 /* XHViewController.m */; };
+		81E13E901F3D4D15009ECE54 /* XHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E13E8E1F3D4D15009ECE54 /* XHViewController.xib */; };
 		81FDD5A11F302BE600C61183 /* NSObject+description.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FDD5A01F302BE600C61183 /* NSObject+description.m */; };
 		E5FA33DCF0832B3C2E07FC90 /* libPods-MVVM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 275C693CF263DADC143C7AEA /* libPods-MVVM.a */; };
 /* End PBXBuildFile section */
@@ -207,9 +223,34 @@
 		81C034331F17561C005EEDDE /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		81C034351F17703A005EEDDE /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		81C034361F17703A005EEDDE /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		81D1DAC81F3AA55000FC4B3E /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		81D1DAC91F3AA55000FC4B3E /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		81D1DACA1F3AA55000FC4B3E /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
 		81D376611F31A3A100BB36C5 /* ClickMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickMeViewController.h; sourceTree = "<group>"; };
 		81D376621F31A3A100BB36C5 /* ClickMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickMeViewController.m; sourceTree = "<group>"; };
 		81D376631F31A3A100BB36C5 /* ClickMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClickMeViewController.xib; sourceTree = "<group>"; };
+		81E13E5E1F3D3978009ECE54 /* CellHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellHeaderView.h; sourceTree = "<group>"; };
+		81E13E5F1F3D3978009ECE54 /* CellHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellHeaderView.m; sourceTree = "<group>"; };
+		81E13E601F3D3978009ECE54 /* CellHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellHeaderView.xib; sourceTree = "<group>"; };
+		81E13E641F3D3978009ECE54 /* HavenMyTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HavenMyTableView.h; sourceTree = "<group>"; };
+		81E13E651F3D3978009ECE54 /* HavenMyTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HavenMyTableView.m; sourceTree = "<group>"; };
+		81E13E661F3D3978009ECE54 /* HavenNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HavenNavigationBar.h; sourceTree = "<group>"; };
+		81E13E671F3D3978009ECE54 /* HavenNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HavenNavigationBar.m; sourceTree = "<group>"; };
+		81E13E681F3D3978009ECE54 /* HavenNavigationBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HavenNavigationBar.xib; sourceTree = "<group>"; };
+		81E13E691F3D3978009ECE54 /* HavenTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HavenTableViewCell.h; sourceTree = "<group>"; };
+		81E13E6A1F3D3978009ECE54 /* HavenTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HavenTableViewCell.m; sourceTree = "<group>"; };
+		81E13E6B1F3D3978009ECE54 /* HavenTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HavenTableViewCell.xib; sourceTree = "<group>"; };
+		81E13E6D1F3D3978009ECE54 /* MyViewControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewControllerViewModel.h; sourceTree = "<group>"; };
+		81E13E6E1F3D3978009ECE54 /* MyViewControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewControllerViewModel.m; sourceTree = "<group>"; };
+		81E13E821F3D4CF5009ECE54 /* DTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTViewController.h; sourceTree = "<group>"; };
+		81E13E831F3D4CF6009ECE54 /* DTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTViewController.m; sourceTree = "<group>"; };
+		81E13E841F3D4CF6009ECE54 /* DTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTViewController.xib; sourceTree = "<group>"; };
+		81E13E871F3D4D04009ECE54 /* WZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZViewController.h; sourceTree = "<group>"; };
+		81E13E881F3D4D04009ECE54 /* WZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZViewController.m; sourceTree = "<group>"; };
+		81E13E891F3D4D04009ECE54 /* WZViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WZViewController.xib; sourceTree = "<group>"; };
+		81E13E8C1F3D4D15009ECE54 /* XHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHViewController.h; sourceTree = "<group>"; };
+		81E13E8D1F3D4D15009ECE54 /* XHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHViewController.m; sourceTree = "<group>"; };
+		81E13E8E1F3D4D15009ECE54 /* XHViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XHViewController.xib; sourceTree = "<group>"; };
 		81FDD59F1F302BE600C61183 /* NSObject+description.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+description.h"; sourceTree = "<group>"; };
 		81FDD5A01F302BE600C61183 /* NSObject+description.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+description.m"; sourceTree = "<group>"; };
 		D1205E389C22A08901EA7954 /* Pods-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM/Pods-MVVM.release.xcconfig"; sourceTree = "<group>"; };
@@ -371,10 +412,10 @@
 		8106EF2C1F15BA4400FC82BB /* Message(消息) */ = {
 			isa = PBXGroup;
 			children = (
-				8106EF371F15BC3000FC82BB /* Model */,
-				8106EF381F15BC3000FC82BB /* View */,
+				81E13E7C1F3D39FE009ECE54 /* Model */,
+				81E13E7D1F3D39FE009ECE54 /* View */,
+				81E13E7E1F3D39FE009ECE54 /* ViewModel */,
 				8106EF361F15BC3000FC82BB /* Controller */,
-				8106EF391F15BC3000FC82BB /* ViewModel */,
 			);
 			name = "Message(消息)";
 			path = Message;
@@ -383,10 +424,10 @@
 		8106EF2D1F15BA4400FC82BB /* My(我) */ = {
 			isa = PBXGroup;
 			children = (
-				8106EF3B1F15BC3700FC82BB /* Model */,
-				8106EF3C1F15BC3700FC82BB /* View */,
+				81E13E5C1F3D3978009ECE54 /* Model */,
+				81E13E5D1F3D3978009ECE54 /* View */,
 				8106EF3A1F15BC3700FC82BB /* Controller */,
-				8106EF3D1F15BC3700FC82BB /* ViewModel */,
+				81E13E6C1F3D3978009ECE54 /* ViewModel */,
 			);
 			name = "My(我)";
 			path = My;
@@ -483,55 +524,25 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		8106EF371F15BC3000FC82BB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		8106EF381F15BC3000FC82BB /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		8106EF391F15BC3000FC82BB /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		8106EF3A1F15BC3700FC82BB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				81AF0CD91F1C5C66008CE9A7 /* MyInfoViewController.h */,
 				81AF0CDA1F1C5C66008CE9A7 /* MyInfoViewController.m */,
+				81D1DAC81F3AA55000FC4B3E /* MyViewController.h */,
+				81D1DAC91F3AA55000FC4B3E /* MyViewController.m */,
+				81D1DACA1F3AA55000FC4B3E /* MyViewController.xib */,
+				81E13E821F3D4CF5009ECE54 /* DTViewController.h */,
+				81E13E831F3D4CF6009ECE54 /* DTViewController.m */,
+				81E13E841F3D4CF6009ECE54 /* DTViewController.xib */,
+				81E13E871F3D4D04009ECE54 /* WZViewController.h */,
+				81E13E881F3D4D04009ECE54 /* WZViewController.m */,
+				81E13E891F3D4D04009ECE54 /* WZViewController.xib */,
+				81E13E8C1F3D4D15009ECE54 /* XHViewController.h */,
+				81E13E8D1F3D4D15009ECE54 /* XHViewController.m */,
+				81E13E8E1F3D4D15009ECE54 /* XHViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		8106EF3B1F15BC3700FC82BB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		8106EF3C1F15BC3700FC82BB /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		8106EF3D1F15BC3700FC82BB /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		8106EF4D1F15D46E00FC82BB /* Category(分类) */ = {
@@ -769,10 +780,10 @@
 		81AF0CDC1F1C5CC4008CE9A7 /* Information(资讯) */ = {
 			isa = PBXGroup;
 			children = (
+				81E13E791F3D39D9009ECE54 /* Model */,
+				81E13E7A1F3D39D9009ECE54 /* View */,
+				81E13E7B1F3D39D9009ECE54 /* ViewModel */,
 				81AF0CDD1F1C5CC4008CE9A7 /* Controller */,
-				81AF0CDE1F1C5CC4008CE9A7 /* Model */,
-				81AF0CDF1F1C5CC4008CE9A7 /* View */,
-				81AF0CE01F1C5CC4008CE9A7 /* ViewModel */,
 			);
 			name = "Information(资讯)";
 			path = Information;
@@ -788,27 +799,6 @@
 				81D376631F31A3A100BB36C5 /* ClickMeViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		81AF0CDE1F1C5CC4008CE9A7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		81AF0CDF1F1C5CC4008CE9A7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		81AF0CE01F1C5CC4008CE9A7 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		81C0342A1F170DFD005EEDDE /* NetWork(网络相关) */ = {
@@ -831,6 +821,82 @@
 			);
 			name = "UserManager(用户相关)";
 			path = UserManager;
+			sourceTree = "<group>";
+		};
+		81E13E5C1F3D3978009ECE54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81E13E5D1F3D3978009ECE54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81E13E641F3D3978009ECE54 /* HavenMyTableView.h */,
+				81E13E651F3D3978009ECE54 /* HavenMyTableView.m */,
+				81E13E5E1F3D3978009ECE54 /* CellHeaderView.h */,
+				81E13E5F1F3D3978009ECE54 /* CellHeaderView.m */,
+				81E13E601F3D3978009ECE54 /* CellHeaderView.xib */,
+				81E13E661F3D3978009ECE54 /* HavenNavigationBar.h */,
+				81E13E671F3D3978009ECE54 /* HavenNavigationBar.m */,
+				81E13E681F3D3978009ECE54 /* HavenNavigationBar.xib */,
+				81E13E691F3D3978009ECE54 /* HavenTableViewCell.h */,
+				81E13E6A1F3D3978009ECE54 /* HavenTableViewCell.m */,
+				81E13E6B1F3D3978009ECE54 /* HavenTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81E13E6C1F3D3978009ECE54 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				81E13E6D1F3D3978009ECE54 /* MyViewControllerViewModel.h */,
+				81E13E6E1F3D3978009ECE54 /* MyViewControllerViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		81E13E791F3D39D9009ECE54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81E13E7A1F3D39D9009ECE54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81E13E7B1F3D39D9009ECE54 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		81E13E7C1F3D39FE009ECE54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81E13E7D1F3D39FE009ECE54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81E13E7E1F3D39FE009ECE54 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		E25E5B368B39283371C12162 /* Frameworks */ = {
@@ -953,16 +1019,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D1DACC1F3AA55000FC4B3E /* MyViewController.xib in Resources */,
 				8106EF481F15BD7200FC82BB /* ForgotPwdController.xib in Resources */,
+				81E13E901F3D4D15009ECE54 /* XHViewController.xib in Resources */,
 				81D376651F31A3A100BB36C5 /* ClickMeViewController.xib in Resources */,
 				8107F76A1F14C2F90016B354 /* LaunchScreen.storyboard in Resources */,
 				819034241F2B241800E0BBFD /* NextController.xib in Resources */,
+				81E13E751F3D3978009ECE54 /* HavenNavigationBar.xib in Resources */,
+				81E13E701F3D3978009ECE54 /* CellHeaderView.xib in Resources */,
 				819034191F2AE25900E0BBFD /* HomeTableViewCell.xib in Resources */,
 				8107F7671F14C2F90016B354 /* Assets.xcassets in Resources */,
 				81AF0CCC1F1C4CA0008CE9A7 /* Main.storyboard in Resources */,
 				8106EF4C1F15BD7200FC82BB /* RegisterController.xib in Resources */,
+				81E13E861F3D4CF6009ECE54 /* DTViewController.xib in Resources */,
+				81E13E8B1F3D4D04009ECE54 /* WZViewController.xib in Resources */,
 				8106EF4A1F15BD7200FC82BB /* LoginController.xib in Resources */,
 				81AF0CF11F1CA77F008CE9A7 /* PostViewController.xib in Resources */,
+				81E13E771F3D3978009ECE54 /* HavenTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1036,9 +1109,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AF0CF01F1CA77F008CE9A7 /* PostViewController.m in Sources */,
+				81E13E761F3D3978009ECE54 /* HavenTableViewCell.m in Sources */,
 				8198FB8A1F1863A50044061E /* MBProgressHUD+Haven.m in Sources */,
 				81AF0CE31F1C5CF8008CE9A7 /* InformationViewController.m in Sources */,
 				81C034371F17703A005EEDDE /* User.m in Sources */,
+				81E13E731F3D3978009ECE54 /* HavenMyTableView.m in Sources */,
 				8106EF491F15BD7200FC82BB /* LoginController.m in Sources */,
 				8106EF6F1F160FBF00FC82BB /* UIView+extension.m in Sources */,
 				8106EF7A1F16128E00FC82BB /* Utils.m in Sources */,
@@ -1051,6 +1126,7 @@
 				8190341C1F2AE3F300E0BBFD /* HomeTableViewModel.m in Sources */,
 				8106EF6C1F16097800FC82BB /* UIBarButtonItem+Haven.m in Sources */,
 				8190341F1F2AE5A800E0BBFD /* HomeTableModel.m in Sources */,
+				81E13E8F1F3D4D15009ECE54 /* XHViewController.m in Sources */,
 				8106EF4B1F15BD7200FC82BB /* RegisterController.m in Sources */,
 				819034141F2AE1EC00E0BBFD /* HomeTableView.m in Sources */,
 				8107F75F1F14C2F90016B354 /* AppDelegate.m in Sources */,
@@ -1062,9 +1138,12 @@
 				81AF0CF41F1CB357008CE9A7 /* ShareManager.m in Sources */,
 				81C0342D1F170E2B005EEDDE /* NetWorkHelper.m in Sources */,
 				81AF0CEC1F1C61F5008CE9A7 /* TabBarBadge.m in Sources */,
+				81E13E781F3D3978009ECE54 /* MyViewControllerViewModel.m in Sources */,
 				8106EF831F16133D00FC82BB /* UIImage+Haven.m in Sources */,
 				81AF5E1A1F20516C009D2746 /* NSArray+Haven.m in Sources */,
+				81E13E8A1F3D4D04009ECE54 /* WZViewController.m in Sources */,
 				8106EF691F16047400FC82BB /* UIStoryboard+Haven.m in Sources */,
+				81E13E851F3D4CF6009ECE54 /* DTViewController.m in Sources */,
 				819034181F2AE25900E0BBFD /* HomeTableViewCell.m in Sources */,
 				8106EF8F1F16151300FC82BB /* HavenScrollView.m in Sources */,
 				81AF0CE91F1C61CA008CE9A7 /* TabBarItem.m in Sources */,
@@ -1079,10 +1158,13 @@
 				81FDD5A11F302BE600C61183 /* NSObject+description.m in Sources */,
 				8106EF721F16117200FC82BB /* NSString+Zy.m in Sources */,
 				819034231F2B241800E0BBFD /* NextController.m in Sources */,
+				81D1DACB1F3AA55000FC4B3E /* MyViewController.m in Sources */,
 				81AF0CD21F1C4E9D008CE9A7 /* RootTabBarViewController.m in Sources */,
 				81AF0CCF1F1C4E5F008CE9A7 /* RootNavViewController.m in Sources */,
 				81AF0CD51F1C5C3E008CE9A7 /* HomeViewController.m in Sources */,
+				81E13E741F3D3978009ECE54 /* HavenNavigationBar.m in Sources */,
 				8106EF601F16015F00FC82BB /* Foundation+Log.m in Sources */,
+				81E13E6F1F3D3978009ECE54 /* CellHeaderView.m in Sources */,
 				8106EF751F1611C700FC82BB /* NSDictionary+Zy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

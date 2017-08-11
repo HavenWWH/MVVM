@@ -26,7 +26,6 @@
 #pragma mark --------  TabBarDelegate ---------
 - (void)clickPostBtnWithTabBar:(TabBar *)tabBar
 {
-  
     PostViewController *postVc = [[PostViewController alloc] init];
     [postVc setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
     [self presentViewController: postVc animated: YES completion: nil];

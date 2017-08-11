@@ -10,19 +10,21 @@
 
 @implementation UIBarButtonItem (Haven)
 
-- (UIBarButtonItem *)initWithNormalImage: (NSString *)normalName highlightImage: (NSString *)highlightImage target: (id)target action: (SEL)action
+- (instancetype)initWithNormalImage: (NSString *)normalName highlightImage: (NSString *)highlightImage target: (id)target action: (SEL)action
 {
     UIButton *btn = [UIButton buttonWithType: UIButtonTypeCustom];
-    [btn setBackgroundImage: [UIImage imageNamed: normalName] forState: UIControlStateNormal];
+    UIImage *image = [UIImage imageNamed: normalName];
+    [btn setBackgroundImage: image forState: UIControlStateNormal];
     [btn setBackgroundImage: [UIImage imageNamed: highlightImage] forState:UIControlStateHighlighted];
-    [btn addTarget: btn action: action forControlEvents: UIControlEventTouchUpInside];
-     btn.frame = CGRectMake(0, 0, btn.currentImage.size.width, btn.currentImage.size.height);
+    [btn addTarget: target action: action forControlEvents: UIControlEventTouchUpInside];
+     btn.bounds = CGRectMake(0, 0, image.size.width, image.size.height);
     return [self initWithCustomView: btn];
 }
 
-+ (UIBarButtonItem *)barButtonWithNormalImage: (NSString *)normalName highlightImage: (NSString *)highlightImage target: (id)target action: (SEL)action
++ (instancetype)barButtonWithNormalImage: (NSString *)normalName highlightImage: (NSString *)highlightImage target: (id)target action: (SEL)action
 {
     return [[self alloc] initWithNormalImage: normalName highlightImage: highlightImage target: target action: action];
 }
+
 
 @end

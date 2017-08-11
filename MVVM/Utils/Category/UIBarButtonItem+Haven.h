@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIBarButtonItem (Haven)
-- (UIBarButtonItem *)initWithNormalImage: (NSString *)normalName highlightImage: (NSString *)highlightImage target: (id)target action: (SEL)action;
+- (instancetype)initWithNormalImage: (NSString *)normalName highlightImage: (NSString *)highlightImage target: (id)target action: (SEL)action;
 
-+ (UIBarButtonItem *)barButtonWithNormalImage: (NSString *)normalName highlightImage: (NSString *)highlightImage target: (id)target action: (SEL)action;
++ (instancetype)barButtonWithNormalImage: (NSString *)normalName highlightImage: (NSString *)highlightImage target: (id)target action: (SEL)action;
 @end

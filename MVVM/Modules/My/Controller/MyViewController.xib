@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyViewController">
+            <connections>
+                <outlet property="headView" destination="r1X-1z-j2C" id="pAM-EQ-LAy"/>
+                <outlet property="scrollView" destination="Je3-mZ-1V4" id="oZZ-kB-bAP"/>
+                <outlet property="tableView" destination="SiM-MU-1tI" id="UiX-04-IT3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Je3-mZ-1V4">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1X-1z-j2C" userLabel="headView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerViewImage" translatesAutoresizingMaskIntoConstraints="NO" id="InS-aM-H2G">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="InS-aM-H2G" firstAttribute="leading" secondItem="r1X-1z-j2C" secondAttribute="leading" id="DIW-fI-cyK"/>
+                                <constraint firstAttribute="bottom" secondItem="InS-aM-H2G" secondAttribute="bottom" id="QyK-QI-Za5"/>
+                                <constraint firstAttribute="trailing" secondItem="InS-aM-H2G" secondAttribute="trailing" id="TBO-Tm-EQc"/>
+                                <constraint firstItem="InS-aM-H2G" firstAttribute="top" secondItem="r1X-1z-j2C" secondAttribute="top" id="lVG-Rw-nc1"/>
+                                <constraint firstAttribute="height" constant="200" id="vej-sA-3qq"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SiM-MU-1tI" customClass="HavenMyTableView">
+                            <rect key="frame" x="0.0" y="200" width="375" height="667"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="r1X-1z-j2C" firstAttribute="top" secondItem="Je3-mZ-1V4" secondAttribute="top" id="1av-35-LY3"/>
+                        <constraint firstItem="r1X-1z-j2C" firstAttribute="leading" secondItem="Je3-mZ-1V4" secondAttribute="leading" id="3NJ-Um-Hjp"/>
+                        <constraint firstAttribute="trailing" secondItem="SiM-MU-1tI" secondAttribute="trailing" id="5FV-3a-Etb"/>
+                        <constraint firstItem="SiM-MU-1tI" firstAttribute="leading" secondItem="Je3-mZ-1V4" secondAttribute="leading" id="5KY-e5-Cfh"/>
+                        <constraint firstItem="SiM-MU-1tI" firstAttribute="width" secondItem="Je3-mZ-1V4" secondAttribute="width" id="CLK-qo-iZd"/>
+                        <constraint firstAttribute="trailing" secondItem="r1X-1z-j2C" secondAttribute="trailing" id="DfS-7w-fSH"/>
+                        <constraint firstItem="SiM-MU-1tI" firstAttribute="top" secondItem="r1X-1z-j2C" secondAttribute="bottom" id="E7i-8L-D2B"/>
+                        <constraint firstAttribute="bottom" secondItem="SiM-MU-1tI" secondAttribute="bottom" id="NqL-Af-jA1"/>
+                        <constraint firstItem="r1X-1z-j2C" firstAttribute="width" secondItem="Je3-mZ-1V4" secondAttribute="width" id="VPm-e0-mRv"/>
+                        <constraint firstItem="SiM-MU-1tI" firstAttribute="height" secondItem="Je3-mZ-1V4" secondAttribute="height" id="ojU-96-gcC"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Je3-mZ-1V4" secondAttribute="bottom" id="DCc-Sa-KaM"/>
+                <constraint firstAttribute="trailing" secondItem="Je3-mZ-1V4" secondAttribute="trailing" id="cdW-bm-61M"/>
+                <constraint firstItem="Je3-mZ-1V4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cpj-UM-DLp"/>
+                <constraint firstItem="Je3-mZ-1V4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xxK-Ob-2iH"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="headerViewImage" width="500" height="217"/>
+    </resources>
+</document>

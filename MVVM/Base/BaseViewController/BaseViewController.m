@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "UIBarButtonItem+Haven.h"
 
 @interface BaseViewController ()
 
@@ -16,9 +17,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    UIBarButtonItem *leftItem = [UIBarButtonItem barButtonWithNormalImage: @"back" highlightImage:@"back" target:self action:@selector(back)];
+    UIBarButtonItem *nagetiveSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    nagetiveSpacer.width = -5;
+    self.navigationItem.leftBarButtonItems = @[nagetiveSpacer, leftItem];
+
 }
 
+- (void)back {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 
 @end
