@@ -19,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.scrollEnabled = NO;
     // Do any additional setup after loading the view from its nib.
 }
 

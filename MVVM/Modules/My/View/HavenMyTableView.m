@@ -9,10 +9,11 @@
 #import "HavenMyTableView.h"
 #import "CellHeaderView.h"
 #import "HavenTableViewCell.h"
+#import "HavenHeaderView.h"
 
 
 @interface HavenMyTableView()<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
-
+@property (nonatomic, strong) HavenHeaderView *headerView;
 @end
 
 @implementation HavenMyTableView
@@ -20,10 +21,12 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.scrollEnabled = NO;
     self.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.delegate = self;
     self.dataSource = self;
+    self.headerView = [HavenHeaderView createHeaderView];
+    self.headerView.size = CGSizeMake(KScreenWidth, HeaderViewHeight - CustomNavHeight);
+    [self addSubview: self.headerView];
     
 }
 
@@ -31,35 +34,61 @@
 #pragma mark ------  <UITableViewDelegate, UITableViewDataSource> ------
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    if (section == 0) {
+        return 1;
+    }
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    HavenTableViewCell *cell = [HavenTableViewCell createHavenTableViewCellWithTableView: tableView];
-    return cell;
+    
+    if (indexPath.section == 0) {
+        static NSString *cellID = @"cellID";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellID];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:cellID];
+        }
+        return cell;
+    }else{
+        HavenTableViewCell *customCell = [HavenTableViewCell createHavenTableViewCellWithTableView: tableView];
+        return customCell;
+    }
+    
+
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    CellHeaderView *cellHeaderView = [CellHeaderView createCellHeaderView];
-    return cellHeaderView;
+    if (section == 1) {
+        CellHeaderView *cellHeaderView = [CellHeaderView createCellHeaderView];
+        return cellHeaderView;
+    }return [[UIView alloc] initWithFrame:CGRectZero];
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 44;
+    if (section == 1) {
+        return 44;
+    }
+    return 0;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return KScreenHeight - self.tableHeaderView.frame.size.height - 44;
+    if (indexPath.section == 0) {
+        return 200;
+    }else{
+        return KScreenHeight - CustomNavHeight - HeaderViewHeight;
+    }
 }
+
 
 
 
@@ -68,18 +97,26 @@
     _viewModel = viewModel;
 }
 
-///允许同时识别多个手势
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-    return YES;
-}
 
 #pragma mark ------   UIScrollViewDelegate  ------
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    DLog(@"tableViewOffset:%@", NSStringFromCGPoint(scrollView.contentOffset));
-    CGFloat offsetY = scrollView.contentOffset.y;
+    CGFloat offSetY = scrollView.contentOffset.y;
+    CGFloat originY = 0;
+    DLog(@"scrollVy:%f",  scrollView.contentOffset.y);
+    if (offSetY > HeaderViewHeight - CustomNavHeight) {
+        scrollView.contentInset = UIEdgeInsetsMake(CustomNavHeight, 0, 0, 0);
+    }
+    if (offSetY < 0) {
+        originY = offSetY;
+        self.headerView.frame = CGRectMake(0, originY, KScreenWidth, HeaderViewHeight-originY);
+    }
+    
+    
+
 
     
 }
+
 
 @end

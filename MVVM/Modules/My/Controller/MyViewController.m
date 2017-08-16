@@ -11,29 +11,43 @@
 #import "HavenNavigationBar.h"
 #import "HavenMyTableView.h"
 
-#define CustomNavHeight 64
 
-#define HeaderViewHeight 200
+
 
 @interface MyViewController ()<HavenNavigationBarDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet HavenMyTableView *tableView;
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIView *headView;
 @property (nonatomic, strong) MyViewControllerViewModel *myViewModel;
 @property (nonatomic, strong) HavenNavigationBar *havenNavigation;
+
 @end
 
 @implementation MyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    self.scrollView.delegate = self;
+    self.automaticallyAdjustsScrollViewInsets = YES;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.myViewModel = [[MyViewControllerViewModel alloc] init];
     self.tableView.viewModel = self.myViewModel;
     [self createCustomNavigationBar];
+    
+    //添加监听者
+    [self.tableView addObserver: self forKeyPath: @"contentOffset" options: NSKeyValueObservingOptionNew context: nil];
+    
 
 }
+
+/** * 监听属性值发生改变时回调 */
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"contentOffset"]) {
+        DLog(@"%@",change[NSKeyValueChangeNewKey]);
+        // 导航栏透明度
+        CGFloat alpha = [change[NSKeyValueChangeNewKey] CGPointValue].y / (HeaderViewHeight - CustomNavHeight);
+        self.havenNavigation.alpha = alpha;
+    }
+    
+}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -41,14 +55,19 @@
     self.navigationController.navigationBar.hidden = YES;
 }
 
-#pragma mark -----------  自定义导航栏 -------------
+#pragma mark -----------  自定义导航栏及HeaderView -------------
 - (void)createCustomNavigationBar
 {
     self.havenNavigation = [HavenNavigationBar createHavenNavigationBar];
     self.havenNavigation.delegate = self;
     self.havenNavigation.alpha = 0;
     [self.view addSubview: self.havenNavigation];
+    
+
+    
 }
+
+
 
 #pragma mark ------ HavenNavigationBarDelegate ------
 - (void)navigationBar:(HavenNavigationBar *)navigationBar buttonClick:(NavigationBarButtonType)navigationButton
@@ -62,22 +81,14 @@
     }
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+
+
+- (void)dealloc
 {
-    
-    
-    CGFloat offSetY = scrollView.contentOffset.y;
-    
-    CGFloat alpha = offSetY / (HeaderViewHeight - CustomNavHeight);
-    
-    DLog(@"scrollVy:%f  alp%f",  scrollView.contentOffset.y, alpha);
-    CGFloat originY = 0;
-    if (offSetY >= HeaderViewHeight - CustomNavHeight) {
-        originY = - (HeaderViewHeight - CustomNavHeight);
-    }
-    if (offSetY <= 0) {
-        
-    }
-    self.havenNavigation.alpha = alpha;
+    [self.tableView removeObserver: self forKeyPath:@"contentOffset"];
 }
+
+
+
+
 @end

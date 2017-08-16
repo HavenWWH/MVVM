@@ -20,10 +20,9 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)myController {
-//    self.hidesBottomBarWhenPushed = YES;
     MyViewController *myVc = [[MyViewController alloc] init];
     [self.navigationController pushViewController: myVc animated: YES];
-//    self.hidesBottomBarWhenPushed = NO;
+
 }
 
 

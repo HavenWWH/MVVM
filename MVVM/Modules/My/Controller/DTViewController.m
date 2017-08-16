@@ -7,9 +7,10 @@
 //
 
 #import "DTViewController.h"
+#import "BaseTableView.h"
 
 @interface DTViewController ()<UITabBarDelegate, UITableViewDataSource, UIScrollViewDelegate>
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet BaseTableView *tableView;
 
 @end
 
@@ -17,14 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.scrollEnabled = NO;
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -42,9 +42,7 @@
     return cell;
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    NSLog(@"DToffSet%@",NSStringFromCGPoint(scrollView.contentOffset));
-}
+
+
 
 @end

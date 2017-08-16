@@ -46,6 +46,11 @@
 		819034241F2B241800E0BBFD /* NextController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 819034221F2B241800E0BBFD /* NextController.xib */; };
 		8198FB841F185D6A0044061E /* NSError+MHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8198FB831F185D6A0044061E /* NSError+MHExtension.m */; };
 		8198FB8A1F1863A50044061E /* MBProgressHUD+Haven.m in Sources */ = {isa = PBXBuildFile; fileRef = 8198FB891F1863A50044061E /* MBProgressHUD+Haven.m */; };
+		81A1C7891F41568500FFA446 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A1C7871F41568500FFA446 /* MyViewController.m */; };
+		81A1C78A1F41568500FFA446 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A1C7881F41568500FFA446 /* MyViewController.xib */; };
+		81A1C7931F41587600FFA446 /* DTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A1C7911F41587600FFA446 /* DTViewController.m */; };
+		81A1C7941F41587600FFA446 /* DTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A1C7921F41587600FFA446 /* DTViewController.xib */; };
+		81A1C7971F417C2400FFA446 /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A1C7961F417C2400FFA446 /* BaseTableView.m */; };
 		81AF0CCC1F1C4CA0008CE9A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AF0CCB1F1C4CA0008CE9A7 /* Main.storyboard */; };
 		81AF0CCF1F1C4E5F008CE9A7 /* RootNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF0CCE1F1C4E5F008CE9A7 /* RootNavViewController.m */; };
 		81AF0CD21F1C4E9D008CE9A7 /* RootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF0CD11F1C4E9D008CE9A7 /* RootTabBarViewController.m */; };
@@ -66,8 +71,8 @@
 		81C034311F175116005EEDDE /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C034301F175116005EEDDE /* UserManager.m */; };
 		81C034341F17561C005EEDDE /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C034331F17561C005EEDDE /* BaseViewController.m */; };
 		81C034371F17703A005EEDDE /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C034361F17703A005EEDDE /* User.m */; };
-		81D1DACB1F3AA55000FC4B3E /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D1DAC91F3AA55000FC4B3E /* MyViewController.m */; };
-		81D1DACC1F3AA55000FC4B3E /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D1DACA1F3AA55000FC4B3E /* MyViewController.xib */; };
+		81D20D821F43CCAB00590720 /* HavenHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D20D811F43CCAB00590720 /* HavenHeaderView.xib */; };
+		81D20D851F43CCBF00590720 /* HavenHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D20D841F43CCBF00590720 /* HavenHeaderView.m */; };
 		81D376641F31A3A100BB36C5 /* ClickMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D376621F31A3A100BB36C5 /* ClickMeViewController.m */; };
 		81D376651F31A3A100BB36C5 /* ClickMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D376631F31A3A100BB36C5 /* ClickMeViewController.xib */; };
 		81E13E6F1F3D3978009ECE54 /* CellHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E13E5F1F3D3978009ECE54 /* CellHeaderView.m */; };
@@ -78,8 +83,6 @@
 		81E13E761F3D3978009ECE54 /* HavenTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E13E6A1F3D3978009ECE54 /* HavenTableViewCell.m */; };
 		81E13E771F3D3978009ECE54 /* HavenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E13E6B1F3D3978009ECE54 /* HavenTableViewCell.xib */; };
 		81E13E781F3D3978009ECE54 /* MyViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E13E6E1F3D3978009ECE54 /* MyViewControllerViewModel.m */; };
-		81E13E851F3D4CF6009ECE54 /* DTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E13E831F3D4CF6009ECE54 /* DTViewController.m */; };
-		81E13E861F3D4CF6009ECE54 /* DTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E13E841F3D4CF6009ECE54 /* DTViewController.xib */; };
 		81E13E8A1F3D4D04009ECE54 /* WZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E13E881F3D4D04009ECE54 /* WZViewController.m */; };
 		81E13E8B1F3D4D04009ECE54 /* WZViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E13E891F3D4D04009ECE54 /* WZViewController.xib */; };
 		81E13E8F1F3D4D15009ECE54 /* XHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E13E8D1F3D4D15009ECE54 /* XHViewController.m */; };
@@ -185,6 +188,14 @@
 		8198FB831F185D6A0044061E /* NSError+MHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+MHExtension.m"; sourceTree = "<group>"; };
 		8198FB881F1863A50044061E /* MBProgressHUD+Haven.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Haven.h"; sourceTree = "<group>"; };
 		8198FB891F1863A50044061E /* MBProgressHUD+Haven.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Haven.m"; sourceTree = "<group>"; };
+		81A1C7861F41568500FFA446 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		81A1C7871F41568500FFA446 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		81A1C7881F41568500FFA446 /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		81A1C7901F41587600FFA446 /* DTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTViewController.h; sourceTree = "<group>"; };
+		81A1C7911F41587600FFA446 /* DTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTViewController.m; sourceTree = "<group>"; };
+		81A1C7921F41587600FFA446 /* DTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTViewController.xib; sourceTree = "<group>"; };
+		81A1C7951F417C2400FFA446 /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
+		81A1C7961F417C2400FFA446 /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		81AF0CCB1F1C4CA0008CE9A7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		81AF0CCD1F1C4E5F008CE9A7 /* RootNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavViewController.h; sourceTree = "<group>"; };
 		81AF0CCE1F1C4E5F008CE9A7 /* RootNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavViewController.m; sourceTree = "<group>"; };
@@ -223,9 +234,9 @@
 		81C034331F17561C005EEDDE /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		81C034351F17703A005EEDDE /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		81C034361F17703A005EEDDE /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		81D1DAC81F3AA55000FC4B3E /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		81D1DAC91F3AA55000FC4B3E /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
-		81D1DACA1F3AA55000FC4B3E /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		81D20D811F43CCAB00590720 /* HavenHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HavenHeaderView.xib; sourceTree = "<group>"; };
+		81D20D831F43CCBF00590720 /* HavenHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HavenHeaderView.h; sourceTree = "<group>"; };
+		81D20D841F43CCBF00590720 /* HavenHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HavenHeaderView.m; sourceTree = "<group>"; };
 		81D376611F31A3A100BB36C5 /* ClickMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickMeViewController.h; sourceTree = "<group>"; };
 		81D376621F31A3A100BB36C5 /* ClickMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickMeViewController.m; sourceTree = "<group>"; };
 		81D376631F31A3A100BB36C5 /* ClickMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClickMeViewController.xib; sourceTree = "<group>"; };
@@ -242,9 +253,6 @@
 		81E13E6B1F3D3978009ECE54 /* HavenTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HavenTableViewCell.xib; sourceTree = "<group>"; };
 		81E13E6D1F3D3978009ECE54 /* MyViewControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewControllerViewModel.h; sourceTree = "<group>"; };
 		81E13E6E1F3D3978009ECE54 /* MyViewControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewControllerViewModel.m; sourceTree = "<group>"; };
-		81E13E821F3D4CF5009ECE54 /* DTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTViewController.h; sourceTree = "<group>"; };
-		81E13E831F3D4CF6009ECE54 /* DTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTViewController.m; sourceTree = "<group>"; };
-		81E13E841F3D4CF6009ECE54 /* DTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTViewController.xib; sourceTree = "<group>"; };
 		81E13E871F3D4D04009ECE54 /* WZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZViewController.h; sourceTree = "<group>"; };
 		81E13E881F3D4D04009ECE54 /* WZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZViewController.m; sourceTree = "<group>"; };
 		81E13E891F3D4D04009ECE54 /* WZViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WZViewController.xib; sourceTree = "<group>"; };
@@ -529,12 +537,12 @@
 			children = (
 				81AF0CD91F1C5C66008CE9A7 /* MyInfoViewController.h */,
 				81AF0CDA1F1C5C66008CE9A7 /* MyInfoViewController.m */,
-				81D1DAC81F3AA55000FC4B3E /* MyViewController.h */,
-				81D1DAC91F3AA55000FC4B3E /* MyViewController.m */,
-				81D1DACA1F3AA55000FC4B3E /* MyViewController.xib */,
-				81E13E821F3D4CF5009ECE54 /* DTViewController.h */,
-				81E13E831F3D4CF6009ECE54 /* DTViewController.m */,
-				81E13E841F3D4CF6009ECE54 /* DTViewController.xib */,
+				81A1C7861F41568500FFA446 /* MyViewController.h */,
+				81A1C7871F41568500FFA446 /* MyViewController.m */,
+				81A1C7881F41568500FFA446 /* MyViewController.xib */,
+				81A1C7901F41587600FFA446 /* DTViewController.h */,
+				81A1C7911F41587600FFA446 /* DTViewController.m */,
+				81A1C7921F41587600FFA446 /* DTViewController.xib */,
 				81E13E871F3D4D04009ECE54 /* WZViewController.h */,
 				81E13E881F3D4D04009ECE54 /* WZViewController.m */,
 				81E13E891F3D4D04009ECE54 /* WZViewController.xib */,
@@ -844,6 +852,11 @@
 				81E13E691F3D3978009ECE54 /* HavenTableViewCell.h */,
 				81E13E6A1F3D3978009ECE54 /* HavenTableViewCell.m */,
 				81E13E6B1F3D3978009ECE54 /* HavenTableViewCell.xib */,
+				81A1C7951F417C2400FFA446 /* BaseTableView.h */,
+				81A1C7961F417C2400FFA446 /* BaseTableView.m */,
+				81D20D831F43CCBF00590720 /* HavenHeaderView.h */,
+				81D20D841F43CCBF00590720 /* HavenHeaderView.m */,
+				81D20D811F43CCAB00590720 /* HavenHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1019,11 +1032,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81D1DACC1F3AA55000FC4B3E /* MyViewController.xib in Resources */,
+				81A1C78A1F41568500FFA446 /* MyViewController.xib in Resources */,
 				8106EF481F15BD7200FC82BB /* ForgotPwdController.xib in Resources */,
 				81E13E901F3D4D15009ECE54 /* XHViewController.xib in Resources */,
 				81D376651F31A3A100BB36C5 /* ClickMeViewController.xib in Resources */,
+				81A1C7941F41587600FFA446 /* DTViewController.xib in Resources */,
 				8107F76A1F14C2F90016B354 /* LaunchScreen.storyboard in Resources */,
+				81D20D821F43CCAB00590720 /* HavenHeaderView.xib in Resources */,
 				819034241F2B241800E0BBFD /* NextController.xib in Resources */,
 				81E13E751F3D3978009ECE54 /* HavenNavigationBar.xib in Resources */,
 				81E13E701F3D3978009ECE54 /* CellHeaderView.xib in Resources */,
@@ -1031,7 +1046,6 @@
 				8107F7671F14C2F90016B354 /* Assets.xcassets in Resources */,
 				81AF0CCC1F1C4CA0008CE9A7 /* Main.storyboard in Resources */,
 				8106EF4C1F15BD7200FC82BB /* RegisterController.xib in Resources */,
-				81E13E861F3D4CF6009ECE54 /* DTViewController.xib in Resources */,
 				81E13E8B1F3D4D04009ECE54 /* WZViewController.xib in Resources */,
 				8106EF4A1F15BD7200FC82BB /* LoginController.xib in Resources */,
 				81AF0CF11F1CA77F008CE9A7 /* PostViewController.xib in Resources */,
@@ -1120,6 +1134,7 @@
 				81D376641F31A3A100BB36C5 /* ClickMeViewController.m in Sources */,
 				8106EF871F16140400FC82BB /* getIPhoneIP.m in Sources */,
 				8106EF7D1F1612E700FC82BB /* NSDate+extension.m in Sources */,
+				81A1C7931F41587600FFA446 /* DTViewController.m in Sources */,
 				81AF0CDB1F1C5C66008CE9A7 /* MyInfoViewController.m in Sources */,
 				8106EF471F15BD7200FC82BB /* ForgotPwdController.m in Sources */,
 				81C034261F17075D005EEDDE /* AppDelegate+AppService.m in Sources */,
@@ -1143,22 +1158,23 @@
 				81AF5E1A1F20516C009D2746 /* NSArray+Haven.m in Sources */,
 				81E13E8A1F3D4D04009ECE54 /* WZViewController.m in Sources */,
 				8106EF691F16047400FC82BB /* UIStoryboard+Haven.m in Sources */,
-				81E13E851F3D4CF6009ECE54 /* DTViewController.m in Sources */,
 				819034181F2AE25900E0BBFD /* HomeTableViewCell.m in Sources */,
 				8106EF8F1F16151300FC82BB /* HavenScrollView.m in Sources */,
 				81AF0CE91F1C61CA008CE9A7 /* TabBarItem.m in Sources */,
 				8106EF611F16015F00FC82BB /* HTTPSTool.m in Sources */,
 				8106EF621F16015F00FC82BB /* URLTool.m in Sources */,
 				81AF0CD81F1C5C51008CE9A7 /* MessageViewController.m in Sources */,
+				81A1C7891F41568500FFA446 /* MyViewController.m in Sources */,
 				813297C51F21F61D00C411DC /* WindowView.m in Sources */,
 				81AF0CE61F1C61BB008CE9A7 /* TabBar.m in Sources */,
 				8106EF8B1F1614C700FC82BB /* HavenActionSheet.m in Sources */,
+				81D20D851F43CCBF00590720 /* HavenHeaderView.m in Sources */,
 				8106EF931F1618D000FC82BB /* SpeechSynthesizerTool.m in Sources */,
+				81A1C7971F417C2400FFA446 /* BaseTableView.m in Sources */,
 				8107F75C1F14C2F90016B354 /* main.m in Sources */,
 				81FDD5A11F302BE600C61183 /* NSObject+description.m in Sources */,
 				8106EF721F16117200FC82BB /* NSString+Zy.m in Sources */,
 				819034231F2B241800E0BBFD /* NextController.m in Sources */,
-				81D1DACB1F3AA55000FC4B3E /* MyViewController.m in Sources */,
 				81AF0CD21F1C4E9D008CE9A7 /* RootTabBarViewController.m in Sources */,
 				81AF0CCF1F1C4E5F008CE9A7 /* RootNavViewController.m in Sources */,
 				81AF0CD51F1C5C3E008CE9A7 /* HomeViewController.m in Sources */,

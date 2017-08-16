@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "MyViewControllerViewModel.h"
 
+#define CustomNavHeight 64
+
+#define HeaderViewHeight 200
+
 @interface HavenMyTableView : UITableView
 @property (nonatomic, strong) MyViewControllerViewModel  *viewModel;
 @end

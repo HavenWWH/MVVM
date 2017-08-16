@@ -10,6 +10,7 @@
 #import "DTViewController.h"
 #import "WZViewController.h"
 #import "XHViewController.h"
+#import "BaseTableView.h"
 
 @interface HavenTableViewCell()<UIPageViewControllerDelegate, UIPageViewControllerDataSource>
 @property (nonatomic, strong) UIPageViewController *pageViewController;
@@ -29,7 +30,7 @@
 }
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [self setPageViewController];
+//    [self setPageViewController];
     [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(selectSegment:) name:@"SelectSegment" object: nil];
 }
 
@@ -37,7 +38,7 @@
 #pragma mark ------  创建分页控制器  ------
 - (void)setPageViewController
 {
-    // UIPageViewControllerOptionSpineLocationKey 翻页效果才有用, 书脊的位置
+//     UIPageViewControllerOptionSpineLocationKey 翻页效果才有用, 书脊的位置
     NSDictionary *options = @{UIPageViewControllerOptionInterPageSpacingKey:@10};
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options: options];
     self.pageViewController.delegate = self;
@@ -97,8 +98,10 @@
 - (void)selectSegment: (NSNotification *)notic
 {
     NSInteger index = [notic.object integerValue];
-    [self.pageViewController setViewControllers: @[self.dataArray[index]] direction:UIPageViewControllerNavigationDirectionForward animated: YES completion: nil];
+//    [self.pageViewController setViewControllers: @[self.dataArray[index]] direction:UIPageViewControllerNavigationDirectionForward animated: YES completion: nil];
 }
+
+
 
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver: self];
