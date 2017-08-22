@@ -14,6 +14,8 @@
 
 @interface HavenMyTableView()<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 @property (nonatomic, strong) HavenHeaderView *headerView;
+@property (nonatomic, strong) HavenTableViewCell *tableViewCell;
+
 @end
 
 @implementation HavenMyTableView
@@ -42,7 +44,7 @@
     if (section == 0) {
         return 1;
     }
-    return 5;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -56,8 +58,8 @@
         }
         return cell;
     }else{
-        HavenTableViewCell *customCell = [HavenTableViewCell createHavenTableViewCellWithTableView: tableView];
-        return customCell;
+        self.tableViewCell = [HavenTableViewCell createHavenTableViewCellWithTableView: tableView];
+        return self.tableViewCell;
     }
     
 
@@ -85,7 +87,7 @@
     if (indexPath.section == 0) {
         return 200;
     }else{
-        return KScreenHeight - CustomNavHeight - HeaderViewHeight;
+        return KScreenHeight - CustomNavHeight - HeaderViewHeight + 200;
     }
 }
 
@@ -106,6 +108,7 @@
     DLog(@"scrollVy:%f",  scrollView.contentOffset.y);
     if (offSetY > HeaderViewHeight - CustomNavHeight) {
         scrollView.contentInset = UIEdgeInsetsMake(CustomNavHeight, 0, 0, 0);
+        self.tableViewCell.canScroll = YES;
     }
     if (offSetY < 0) {
         originY = offSetY;

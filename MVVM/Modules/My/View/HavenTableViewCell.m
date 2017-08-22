@@ -12,9 +12,15 @@
 #import "XHViewController.h"
 #import "BaseTableView.h"
 
-@interface HavenTableViewCell()<UIPageViewControllerDelegate, UIPageViewControllerDataSource>
-@property (nonatomic, strong) UIPageViewController *pageViewController;
+
+#define segmentCount 3
+
+#define contentHeight KScreenHeight - 64
+
+@interface HavenTableViewCell()<UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) NSArray *dataArray;
+@property (nonatomic, strong) UIScrollView *scrollView;
+
 
 @end
 
@@ -32,79 +38,86 @@
     [super awakeFromNib];
 //    [self setPageViewController];
     [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(selectSegment:) name:@"SelectSegment" object: nil];
+    
+    [self createScrollView];
 }
 
-
-#pragma mark ------  创建分页控制器  ------
-- (void)setPageViewController
+#pragma mark --- scrollView ---
+- (void)createScrollView
 {
-//     UIPageViewControllerOptionSpineLocationKey 翻页效果才有用, 书脊的位置
-    NSDictionary *options = @{UIPageViewControllerOptionInterPageSpacingKey:@10};
-    self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options: options];
-    self.pageViewController.delegate = self;
-    self.pageViewController.dataSource  =self;
-    
-    
-    DTViewController *dtVc = [[DTViewController  alloc] init];
-    WZViewController *wzVc = [[WZViewController  alloc] init];
-    XHViewController *xhVc = [[XHViewController  alloc] init];
-    self.dataArray = @[dtVc, wzVc, xhVc];
-    
-    [self.pageViewController setViewControllers:@[self.dataArray[0]] direction:UIPageViewControllerNavigationDirectionForward animated: YES completion: nil];
-    
-    [self.contentView addSubview: self.pageViewController.view];
-}
-
-#pragma mark ------ UIPageViewControllerDelegate, UIPageViewControllerDataSource ------
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
-{
-    NSInteger index = [self.dataArray indexOfObject: viewController];
-    if (index == 0 || index == NSNotFound) {
-        return nil;
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, contentHeight)];
+    self.scrollView.contentSize = CGSizeMake(KScreenWidth * segmentCount, 0);
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.delegate = self;
+    [self.contentView addSubview: self.scrollView];
+    for (int i = 0; i < segmentCount; i++) {
+        UITableView *tableView = [[UITableView alloc] initWithFrame: CGRectMake(i * KScreenWidth, 0, KScreenWidth, contentHeight) style:UITableViewStylePlain];
+        tableView.tag = 10000 + i;
+        tableView.delegate = self;
+        tableView.dataSource = self;
+        tableView.scrollEnabled = NO;
+        [self.scrollView addSubview: tableView];
     }
-    
-    index -- ;
-    
-    return self.dataArray[index];
-}
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
-{
-    NSInteger index = [self.dataArray indexOfObject: viewController];
-    if (index == self.dataArray.count - 1 || index == NSNotFound) {
-        return nil;
-    }
-    index ++;
-    return self.dataArray[index];
-}
-// 开始翻页
-- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers
-{
-    NSLog(@"pendingViewControllers%@", pendingViewControllers);
-}
-
-// 结束翻页
-- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed
-{
-    // 取出当前控制器在数组中的索引
-    NSInteger index = [self.dataArray indexOfObject:self.pageViewController.viewControllers.firstObject];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"pageViewScrollEnd" object: @(index)];
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 - (void)selectSegment: (NSNotification *)notic
 {
     NSInteger index = [notic.object integerValue];
-//    [self.pageViewController setViewControllers: @[self.dataArray[index]] direction:UIPageViewControllerNavigationDirectionForward animated: YES completion: nil];
+    self.scrollView.contentOffset = CGPointMake(index * KScreenWidth, 0);
 }
 
-
+- (void)setCanScroll:(BOOL)canScroll
+{
+    _canScroll = canScroll;
+    for (UIView *view in self.scrollView.subviews) {
+        if ([view isKindOfClass:[UITableView class]]) {
+            UITableView *tableView = (UITableView *)view;
+            tableView.scrollEnabled = YES;
+        }
+    }
+}
 
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver: self];
+}
+
+#pragma mark ------ UITableViewDelegate, UITableViewDelegate ------
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 20;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *ID = @"ce";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: ID];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:ID];
+    }
+    if (tableView.tag == 10000) {
+        cell.textLabel.text = [NSString stringWithFormat:@"%ld wu", indexPath.row];
+    }
+    if (tableView.tag == 10001) {
+        cell.textLabel.text = [NSString stringWithFormat:@"%ld wen", indexPath.row];
+    }
+    if (tableView.tag == 10002) {
+        cell.textLabel.text = [NSString stringWithFormat:@"%ld hai", indexPath.row];
+    }
+    return cell;
+}
+
+#pragma mark ------    UIScrollViewDelegate   ------
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    
+    NSInteger index = floor((self.scrollView.contentOffset.x - KScreenWidth / 2) / KScreenWidth) + 1;
+    
+    NSLog(@"offset%@ index%ld", NSStringFromCGPoint(scrollView.contentOffset), (long)index);
+    
+     [[NSNotificationCenter defaultCenter] postNotificationName:@"pageViewScrollEnd" object: @(index)];
 }
 
 @end

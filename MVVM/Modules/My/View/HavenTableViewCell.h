@@ -11,5 +11,5 @@
 @interface HavenTableViewCell : UITableViewCell
 
 + (instancetype)createHavenTableViewCellWithTableView: (UITableView *)tableView;
-
+@property (nonatomic, assign) BOOL canScroll;
 @end
