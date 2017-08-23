@@ -23,12 +23,13 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    self.canScroll = YES;
     self.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.delegate = self;
     self.dataSource = self;
     self.headerView = [HavenHeaderView createHeaderView];
-    self.headerView.size = CGSizeMake(KScreenWidth, HeaderViewHeight - CustomNavHeight);
     [self addSubview: self.headerView];
+    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(scrollLeaveTop:) name: @"scrollLeaveTop" object: nil];
     
 }
 
@@ -59,6 +60,7 @@
         return cell;
     }else{
         self.tableViewCell = [HavenTableViewCell createHavenTableViewCellWithTableView: tableView];
+        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         return self.tableViewCell;
     }
     
@@ -85,9 +87,9 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
-        return 200;
+        return HeaderViewHeight;
     }else{
-        return KScreenHeight - CustomNavHeight - HeaderViewHeight + 200;
+        return KScreenHeight - 64 - 44;
     }
 }
 
@@ -98,17 +100,29 @@
 {
     _viewModel = viewModel;
 }
-
+#pragma mark -------  通知的方法  --------
+- (void)scrollLeaveTop: (NSNotification *)notic
+{
+    self.canScroll = YES;
+    self.tableViewCell.canScroll = NO;
+}
 
 #pragma mark ------   UIScrollViewDelegate  ------
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat offSetY = scrollView.contentOffset.y;
     CGFloat originY = 0;
-    DLog(@"scrollVy:%f",  scrollView.contentOffset.y);
-    if (offSetY > HeaderViewHeight - CustomNavHeight) {
-        scrollView.contentInset = UIEdgeInsetsMake(CustomNavHeight, 0, 0, 0);
-        self.tableViewCell.canScroll = YES;
+//    DLog(@"scrollVy:%f",  scrollView.contentOffset.y);
+    if (offSetY >= HeaderViewHeight - CustomNavHeight) {
+        scrollView.contentOffset = CGPointMake(0, HeaderViewHeight - CustomNavHeight);
+        if (self.canScroll) {
+            self.canScroll = NO;
+            self.tableViewCell.canScroll = YES;
+        }
+    }else{
+        if (!_canScroll) {
+            scrollView.contentOffset = CGPointMake(0, HeaderViewHeight - CustomNavHeight);
+        }
     }
     if (offSetY < 0) {
         originY = offSetY;
@@ -116,10 +130,10 @@
     }
     
     
-
-
-    
 }
-
+///允许同时识别多个手势
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
+}
 
 @end

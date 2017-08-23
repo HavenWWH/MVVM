@@ -26,6 +26,8 @@
                            NSFontAttributeName : [UIFont systemFontOfSize: 17.0]};
     [self.segment setTitleTextAttributes: SelectDict forState: UIControlStateSelected];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pageViewChange:) name: @"pageViewScrollEnd" object: nil];
+    
+    
 }
 
 + (instancetype)createCellHeaderView

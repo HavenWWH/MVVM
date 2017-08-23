@@ -15,7 +15,7 @@
 
 #define segmentCount 3
 
-#define contentHeight KScreenHeight - 64
+#define contentHeight KScreenHeight - 64 - 44
 
 @interface HavenTableViewCell()<UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) NSArray *dataArray;
@@ -36,7 +36,6 @@
 }
 - (void)awakeFromNib {
     [super awakeFromNib];
-//    [self setPageViewController];
     [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(selectSegment:) name:@"SelectSegment" object: nil];
     
     [self createScrollView];
@@ -49,13 +48,12 @@
     self.scrollView.contentSize = CGSizeMake(KScreenWidth * segmentCount, 0);
     self.scrollView.pagingEnabled = YES;
     self.scrollView.delegate = self;
-    [self.contentView addSubview: self.scrollView];
+    [self addSubview: self.scrollView];
     for (int i = 0; i < segmentCount; i++) {
         UITableView *tableView = [[UITableView alloc] initWithFrame: CGRectMake(i * KScreenWidth, 0, KScreenWidth, contentHeight) style:UITableViewStylePlain];
         tableView.tag = 10000 + i;
         tableView.delegate = self;
         tableView.dataSource = self;
-        tableView.scrollEnabled = NO;
         [self.scrollView addSubview: tableView];
     }
 }
@@ -72,12 +70,7 @@
 - (void)setCanScroll:(BOOL)canScroll
 {
     _canScroll = canScroll;
-    for (UIView *view in self.scrollView.subviews) {
-        if ([view isKindOfClass:[UITableView class]]) {
-            UITableView *tableView = (UITableView *)view;
-            tableView.scrollEnabled = YES;
-        }
-    }
+ 
 }
 
 - (void)dealloc{
@@ -112,12 +105,26 @@
 #pragma mark ------    UIScrollViewDelegate   ------
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    NSLog(@"offset%@", NSStringFromCGPoint(scrollView.contentOffset));
+    if (!self.canScroll && scrollView.contentOffset.x == 0) {
+        [scrollView setContentOffset:CGPointZero];
+    }
+    CGFloat offY = scrollView.contentOffset.y;
     
+    // 计算scrollView当前页数
     NSInteger index = floor((self.scrollView.contentOffset.x - KScreenWidth / 2) / KScreenWidth) + 1;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pageViewScrollEnd" object: @(index)];
     
-    NSLog(@"offset%@ index%ld", NSStringFromCGPoint(scrollView.contentOffset), (long)index);
     
-     [[NSNotificationCenter defaultCenter] postNotificationName:@"pageViewScrollEnd" object: @(index)];
+    if (offY < 0) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"scrollLeaveTop" object:nil];
+        self.canScroll = NO;
+        scrollView.contentOffset = CGPointZero;
+    }
+
+    
 }
+
+
 
 @end

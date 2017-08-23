@@ -40,7 +40,6 @@
 /** * 监听属性值发生改变时回调 */
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"contentOffset"]) {
-        DLog(@"%@",change[NSKeyValueChangeNewKey]);
         // 导航栏透明度
         CGFloat alpha = [change[NSKeyValueChangeNewKey] CGPointValue].y / (HeaderViewHeight - CustomNavHeight);
         self.havenNavigation.alpha = alpha;

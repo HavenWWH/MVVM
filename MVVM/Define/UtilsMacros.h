@@ -23,10 +23,10 @@
 #define kScreen_Bounds [UIScreen mainScreen].bounds
 
 //设备判断 iPhone
-#define iPhoneSE XHScreenWidth == 320.0f && XHScreenHeight == 568.0f
-#define iPhone6s XHScreenWidth == 375.0f && XHScreenHeight == 667.0f
-#define iPhone6P XHScreenWidth == 414.0f && XHScreenHeight == 736.0f
-#define iPhone4s XHScreenWidth == 320.0f && XHScreenHeight == 480.0f
+#define iPhoneSE KScreenWidth == 320.0f && KScreenHeight == 568.0f
+#define iPhone6s KScreenWidth == 375.0f && KScreenHeight == 667.0f
+#define iPhone6P KScreenWidth == 414.0f && KScreenHeight == 736.0f
+#define iPhone4s KScreenWidth == 320.0f && KScreenHeight == 480.0f
 
 //强弱引用
 #define kWeakSelf(type)  __weak typeof(type) weak##type = type;

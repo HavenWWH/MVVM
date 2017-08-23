@@ -16,10 +16,16 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.delegate = self;
 
- 
-    
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.delegate = self;
+    }
+    return self;
 }
 
 #pragma mark - Table view data source

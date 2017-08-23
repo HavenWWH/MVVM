@@ -15,4 +15,5 @@
 
 @interface HavenMyTableView : UITableView
 @property (nonatomic, strong) MyViewControllerViewModel  *viewModel;
+@property (nonatomic, assign) BOOL canScroll;
 @end
