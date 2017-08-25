@@ -7,6 +7,8 @@
 //
 
 #import "ClickMeViewController.h"
+#import "LiWuShuoViewController.h"
+#import "MeiTuanViewController.h"
 
 @interface ClickMeViewController ()
 
@@ -18,5 +20,13 @@
     [super viewDidLoad];
     
 
+}
+- (IBAction)tableView {
+    MeiTuanViewController *mtVc = [[MeiTuanViewController alloc] init];
+    [self.navigationController pushViewController: mtVc animated:YES];
+}
+- (IBAction)collectionView {
+    LiWuShuoViewController *lwsVc = [[LiWuShuoViewController alloc] init];
+    [self.navigationController pushViewController: lwsVc animated: YES];
 }
 @end

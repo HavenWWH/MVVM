@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LWScell" id="gTV-IL-0wX" customClass="LWSCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="117" height="114"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="117" height="114"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerViewImage" translatesAutoresizingMaskIntoConstraints="NO" id="UI6-4d-mdz">
+                        <rect key="frame" x="17.5" y="5" width="82" height="82"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="UI6-4d-mdz" secondAttribute="height" multiplier="1:1" id="dx3-d4-hrF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haven" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUG-CT-1Fv">
+                        <rect key="frame" x="0.0" y="91" width="117" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="UI6-4d-mdz" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.7" id="EAj-9C-azP"/>
+                <constraint firstItem="UI6-4d-mdz" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="EZP-vu-a8x"/>
+                <constraint firstItem="lUG-CT-1Fv" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="MFA-BQ-ppO"/>
+                <constraint firstAttribute="trailing" secondItem="lUG-CT-1Fv" secondAttribute="trailing" id="bmj-PO-88i"/>
+                <constraint firstItem="lUG-CT-1Fv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dId-Qd-jT9"/>
+                <constraint firstItem="UI6-4d-mdz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="pUi-9w-51I"/>
+                <constraint firstAttribute="bottom" secondItem="lUG-CT-1Fv" secondAttribute="bottom" constant="5" id="sN0-Dv-mx0"/>
+            </constraints>
+            <size key="customSize" width="117" height="114"/>
+            <connections>
+                <outlet property="iconImage" destination="UI6-4d-mdz" id="OFH-Y6-mBM"/>
+                <outlet property="namelable" destination="lUG-CT-1Fv" id="7al-Bw-VgR"/>
+            </connections>
+            <point key="canvasLocation" x="64.5" y="91"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="headerViewImage" width="500" height="217"/>
+    </resources>
+</document>

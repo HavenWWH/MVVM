@@ -38,7 +38,7 @@
         if ([self.delegate respondsToSelector:@selector(reloadTableView)]) {
             [self.delegate reloadTableView];
         }
-        DLog(@"%@", self.dataArray);
+//        DLog(@"%@", self.dataArray);
     } failure:^(NSError * _Nonnull error) {
     }];
 }

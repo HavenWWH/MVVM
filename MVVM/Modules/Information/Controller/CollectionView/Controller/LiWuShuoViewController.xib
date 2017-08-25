@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiWuShuoViewController">
+            <connections>
+                <outlet property="flowLayout" destination="Zvm-Ds-b1I" id="PhQ-eF-9wD"/>
+                <outlet property="leftTableView" destination="vnv-ou-NfK" id="99G-IK-Pks"/>
+                <outlet property="rightCollectionView" destination="tma-WI-HgC" id="uXW-wa-SA3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vnv-ou-NfK" customClass="LWSTableView">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="GIQ-xj-eAv"/>
+                    </constraints>
+                </tableView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tma-WI-HgC" customClass="LWSCollectionView">
+                    <rect key="frame" x="80" y="0.0" width="295" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zvm-Ds-b1I">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tma-WI-HgC" firstAttribute="leading" secondItem="vnv-ou-NfK" secondAttribute="trailing" id="4iK-r8-XBk"/>
+                <constraint firstAttribute="bottom" secondItem="vnv-ou-NfK" secondAttribute="bottom" id="8r0-lY-fJP"/>
+                <constraint firstAttribute="bottom" secondItem="tma-WI-HgC" secondAttribute="bottom" id="97k-Ja-52h"/>
+                <constraint firstAttribute="trailing" secondItem="tma-WI-HgC" secondAttribute="trailing" id="9X8-eg-CZQ"/>
+                <constraint firstItem="vnv-ou-NfK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VtV-d0-Toh"/>
+                <constraint firstItem="vnv-ou-NfK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tGz-Mc-ALi"/>
+                <constraint firstItem="tma-WI-HgC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xha-nl-cXC"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
