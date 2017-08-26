@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22504CE51F514B1600F0C813 /* JHHeaderFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 22504CE41F514B1600F0C813 /* JHHeaderFlowLayout.m */; };
 		8106EF471F15BD7200FC82BB /* ForgotPwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106EF3F1F15BD7200FC82BB /* ForgotPwdController.m */; };
 		8106EF481F15BD7200FC82BB /* ForgotPwdController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8106EF401F15BD7200FC82BB /* ForgotPwdController.xib */; };
 		8106EF491F15BD7200FC82BB /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106EF421F15BD7200FC82BB /* LoginController.m */; };
@@ -137,6 +138,8 @@
 
 /* Begin PBXFileReference section */
 		1C36F805F9BA3486CE2218F5 /* Pods-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM/Pods-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		22504CE31F514B1600F0C813 /* JHHeaderFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHHeaderFlowLayout.h; sourceTree = "<group>"; };
+		22504CE41F514B1600F0C813 /* JHHeaderFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHHeaderFlowLayout.m; sourceTree = "<group>"; };
 		275C693CF263DADC143C7AEA /* libPods-MVVM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8106EF3E1F15BD7200FC82BB /* ForgotPwdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPwdController.h; sourceTree = "<group>"; };
 		8106EF3F1F15BD7200FC82BB /* ForgotPwdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPwdController.m; sourceTree = "<group>"; };
@@ -967,6 +970,8 @@
 				81E5306D1F4FC3F700483E4D /* CollectionHeaderView.h */,
 				81E5306E1F4FC3F700483E4D /* CollectionHeaderView.m */,
 				81E5306F1F4FC3F700483E4D /* CollectionHeaderView.xib */,
+				22504CE31F514B1600F0C813 /* JHHeaderFlowLayout.h */,
+				22504CE41F514B1600F0C813 /* JHHeaderFlowLayout.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1347,6 +1352,7 @@
 				8106EF871F16140400FC82BB /* getIPhoneIP.m in Sources */,
 				81BD644B1F4EAB5B0028F0B5 /* FoodsModel.m in Sources */,
 				8106EF7D1F1612E700FC82BB /* NSDate+extension.m in Sources */,
+				22504CE51F514B1600F0C813 /* JHHeaderFlowLayout.m in Sources */,
 				81BD64201F4E6A9F0028F0B5 /* MeiTuanViewModel.m in Sources */,
 				81A1C7931F41587600FFA446 /* DTViewController.m in Sources */,
 				81AF0CDB1F1C5C66008CE9A7 /* MyInfoViewController.m in Sources */,
