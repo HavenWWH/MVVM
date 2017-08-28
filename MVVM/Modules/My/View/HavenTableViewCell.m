@@ -7,9 +7,6 @@
 //
 
 #import "HavenTableViewCell.h"
-#import "DTViewController.h"
-#import "WZViewController.h"
-#import "XHViewController.h"
 #import "BaseTableView.h"
 
 
@@ -105,7 +102,7 @@
 #pragma mark ------    UIScrollViewDelegate   ------
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"offset%@", NSStringFromCGPoint(scrollView.contentOffset));
+//    NSLog(@"offset%@", NSStringFromCGPoint(scrollView.contentOffset));
     if (!self.canScroll && scrollView.contentOffset.x == 0) {
         [scrollView setContentOffset:CGPointZero];
     }

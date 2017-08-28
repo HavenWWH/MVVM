@@ -21,10 +21,13 @@
     return [[[NSBundle mainBundle] loadNibNamed: @"HavenHeaderView" owner: nil options:nil] lastObject];
 }
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+}
 
 - (void)layoutSubviews
 {
-    self.frame = CGRectMake(0, 0, KScreenWidth, 200);
 }
 
 @end

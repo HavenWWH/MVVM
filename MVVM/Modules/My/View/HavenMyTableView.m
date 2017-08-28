@@ -28,6 +28,14 @@
     self.delegate = self;
     self.dataSource = self;
     self.headerView = [HavenHeaderView createHeaderView];
+    // 至今搞不懂这个尺寸为什么要这么适配,  到SE上面,  用屏幕宽度都不一样了
+    if (iPhone6P) {
+        self.headerView.frame = CGRectMake(0, 0, KScreenWidth, HeaderViewHeight - CustomNavHeight);
+    }else if (iPhoneSE) {
+        self.headerView.frame = CGRectMake(0, 0, 375, HeaderViewHeight + 100);
+    }else{
+        self.headerView.frame = CGRectMake(0, 0, KScreenWidth, HeaderViewHeight);
+    }
     [self addSubview: self.headerView];
     [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(scrollLeaveTop:) name: @"scrollLeaveTop" object: nil];
     

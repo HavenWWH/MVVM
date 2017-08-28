@@ -11,7 +11,7 @@
 #import "LiWuShuoViewModel.h"
 #import "LWSTableView.h"
 #import "LWSCollectionView.h"
-#import "JHHeaderFlowLayout.h"
+#import "LJCollectionViewFlowLayout.h"
 
 
 @interface LiWuShuoViewController ()
@@ -20,7 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet LWSCollectionView *rightCollectionView;
 
-@property (weak, nonatomic) IBOutlet JHHeaderFlowLayout *flowLayout;
+@property (weak, nonatomic) IBOutlet LJCollectionViewFlowLayout *flowLayout;
 
 @property (nonatomic, strong) LiWuShuoViewModel *lwsViewModel;
 
@@ -52,10 +52,10 @@
     self.flowLayout.minimumInteritemSpacing = 0;
     self.flowLayout.minimumLineSpacing = 0;
     self.flowLayout.headerReferenceSize = CGSizeMake(KScreenWidth - 80, 44);
-    // ios9 以后sectionHeader悬浮只要设置这个属性即可。  如果是iOS9之前需要自定义flowLayout
-    if (CurrentSystemVersion >= 9.0) {
-        self.flowLayout.sectionHeadersPinToVisibleBounds = YES;
-    }
+    // ios9 以后sectionHeader悬浮只要设置这个属性即可。  如果是iOS9之前需要自定义flowLayout, 如果实现了自定义layout, 则不需要实现此方法, 否则报错LJCollectionViewFlowLayout
+//    if (CurrentSystemVersion >= 9.0) {
+//        self.flowLayout.sectionHeadersPinToVisibleBounds = YES;
+//    }
 
 }
 @end
