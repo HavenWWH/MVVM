@@ -28,5 +28,6 @@
 - (IBAction)collectionView {
     LiWuShuoViewController *lwsVc = [[LiWuShuoViewController alloc] init];
     [self.navigationController pushViewController: lwsVc animated: YES];
+    
 }
 @end

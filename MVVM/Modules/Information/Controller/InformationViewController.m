@@ -8,8 +8,10 @@
 
 #import "InformationViewController.h"
 #import "ClickMeViewController.h"
+#import "BezierPathControllerView.h"
 
 @interface InformationViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *bseButton;
 
 @end
 
@@ -23,5 +25,12 @@
 {
     ClickMeViewController *clickView = [[ClickMeViewController alloc] init];
     [self.navigationController pushViewController: clickView animated: YES];
+}
+
+// 贝塞尔曲线
+- (IBAction)bseClick {
+    BezierPathControllerView *bVc = [[BezierPathControllerView alloc] init];
+    [self.navigationController pushViewController: bVc  animated: YES];
+    
 }
 @end

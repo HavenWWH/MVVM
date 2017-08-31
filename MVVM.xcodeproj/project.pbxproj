@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22BF6ADD1F56559B006E46E0 /* BezierPathControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BF6ADB1F56559B006E46E0 /* BezierPathControllerView.m */; };
+		22BF6ADE1F56559B006E46E0 /* BezierPathControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22BF6ADC1F56559B006E46E0 /* BezierPathControllerView.xib */; };
+		22BF6AE21F5699F8006E46E0 /* AddShoppingCarTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BF6AE11F5699F8006E46E0 /* AddShoppingCarTool.m */; };
+		22BF6AE61F57AE11006E46E0 /* OvalProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BF6AE51F57AE11006E46E0 /* OvalProgress.m */; };
 		8106EF471F15BD7200FC82BB /* ForgotPwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106EF3F1F15BD7200FC82BB /* ForgotPwdController.m */; };
 		8106EF481F15BD7200FC82BB /* ForgotPwdController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8106EF401F15BD7200FC82BB /* ForgotPwdController.xib */; };
 		8106EF491F15BD7200FC82BB /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106EF421F15BD7200FC82BB /* LoginController.m */; };
@@ -132,6 +136,13 @@
 
 /* Begin PBXFileReference section */
 		1C36F805F9BA3486CE2218F5 /* Pods-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM/Pods-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		22BF6ADA1F56559B006E46E0 /* BezierPathControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierPathControllerView.h; sourceTree = "<group>"; };
+		22BF6ADB1F56559B006E46E0 /* BezierPathControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierPathControllerView.m; sourceTree = "<group>"; };
+		22BF6ADC1F56559B006E46E0 /* BezierPathControllerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BezierPathControllerView.xib; sourceTree = "<group>"; };
+		22BF6AE01F5699F8006E46E0 /* AddShoppingCarTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddShoppingCarTool.h; sourceTree = "<group>"; };
+		22BF6AE11F5699F8006E46E0 /* AddShoppingCarTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddShoppingCarTool.m; sourceTree = "<group>"; };
+		22BF6AE41F57AE11006E46E0 /* OvalProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OvalProgress.h; sourceTree = "<group>"; };
+		22BF6AE51F57AE11006E46E0 /* OvalProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OvalProgress.m; sourceTree = "<group>"; };
 		275C693CF263DADC143C7AEA /* libPods-MVVM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8106EF3E1F15BD7200FC82BB /* ForgotPwdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPwdController.h; sourceTree = "<group>"; };
 		8106EF3F1F15BD7200FC82BB /* ForgotPwdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPwdController.m; sourceTree = "<group>"; };
@@ -350,6 +361,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22BF6AD51F56556D006E46E0 /* BezierPath(贝塞尔) */ = {
+			isa = PBXGroup;
+			children = (
+				22BF6AD61F56556D006E46E0 /* Controller */,
+				22BF6AD71F56556D006E46E0 /* Model */,
+				22BF6AD81F56556D006E46E0 /* View */,
+				22BF6AD91F56556D006E46E0 /* ViewModel */,
+			);
+			name = "BezierPath(贝塞尔)";
+			path = BezierPath;
+			sourceTree = "<group>";
+		};
+		22BF6AD61F56556D006E46E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22BF6ADA1F56559B006E46E0 /* BezierPathControllerView.h */,
+				22BF6ADB1F56559B006E46E0 /* BezierPathControllerView.m */,
+				22BF6ADC1F56559B006E46E0 /* BezierPathControllerView.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22BF6AD71F56556D006E46E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22BF6AD81F56556D006E46E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22BF6AD91F56556D006E46E0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		22BF6ADF1F56997C006E46E0 /* BezierShopping(添加到购物车动画) */ = {
+			isa = PBXGroup;
+			children = (
+				22BF6AE01F5699F8006E46E0 /* AddShoppingCarTool.h */,
+				22BF6AE11F5699F8006E46E0 /* AddShoppingCarTool.m */,
+			);
+			name = "BezierShopping(添加到购物车动画)";
+			path = BezierShopping;
+			sourceTree = "<group>";
+		};
+		22BF6AE31F57ADEF006E46E0 /* OvalProgress(圆形进度条) */ = {
+			isa = PBXGroup;
+			children = (
+				22BF6AE41F57AE11006E46E0 /* OvalProgress.h */,
+				22BF6AE51F57AE11006E46E0 /* OvalProgress.m */,
+			);
+			name = "OvalProgress(圆形进度条)";
+			path = OvalProgress;
+			sourceTree = "<group>";
+		};
 		43EFC50CD2F38604FE5E33B5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -718,6 +792,8 @@
 		8106EF841F1613EF00FC82BB /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				22BF6AE31F57ADEF006E46E0 /* OvalProgress(圆形进度条) */,
+				22BF6ADF1F56997C006E46E0 /* BezierShopping(添加到购物车动画) */,
 				8106EF8C1F1614FF00FC82BB /* ScrollView(上下滚动的文字) */,
 				8106EF881F16148000FC82BB /* ActionSheet(自定义弹窗) */,
 				8106EF851F16140400FC82BB /* getIPhoneIP.h */,
@@ -850,6 +926,7 @@
 		81AF0CDD1F1C5CC4008CE9A7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				22BF6AD51F56556D006E46E0 /* BezierPath(贝塞尔) */,
 				81CD01641F4D83B7006474E7 /* CollectionView(联动) */,
 				81CD01651F4D83B7006474E7 /* TableView(联动) */,
 				81AF0CE11F1C5CF8008CE9A7 /* InformationViewController.h */,
@@ -1214,6 +1291,7 @@
 				81A1C78A1F41568500FFA446 /* MyViewController.xib in Resources */,
 				8106EF481F15BD7200FC82BB /* ForgotPwdController.xib in Resources */,
 				81BD64421F4EA4100028F0B5 /* TableSectionHeaderView.xib in Resources */,
+				22BF6ADE1F56559B006E46E0 /* BezierPathControllerView.xib in Resources */,
 				81D376651F31A3A100BB36C5 /* ClickMeViewController.xib in Resources */,
 				81E5306C1F4FBBA000483E4D /* LWSCollectionViewCell.xib in Resources */,
 				8107F76A1F14C2F90016B354 /* LaunchScreen.storyboard in Resources */,
@@ -1329,6 +1407,7 @@
 				81AF0CDB1F1C5C66008CE9A7 /* MyInfoViewController.m in Sources */,
 				8106EF471F15BD7200FC82BB /* ForgotPwdController.m in Sources */,
 				81C034261F17075D005EEDDE /* AppDelegate+AppService.m in Sources */,
+				22BF6ADD1F56559B006E46E0 /* BezierPathControllerView.m in Sources */,
 				8190341C1F2AE3F300E0BBFD /* HomeTableViewModel.m in Sources */,
 				8106EF6C1F16097800FC82BB /* UIBarButtonItem+Haven.m in Sources */,
 				8190341F1F2AE5A800E0BBFD /* HomeTableModel.m in Sources */,
@@ -1351,6 +1430,7 @@
 				8106EF831F16133D00FC82BB /* UIImage+Haven.m in Sources */,
 				81AF5E1A1F20516C009D2746 /* NSArray+Haven.m in Sources */,
 				8106EF691F16047400FC82BB /* UIStoryboard+Haven.m in Sources */,
+				22BF6AE21F5699F8006E46E0 /* AddShoppingCarTool.m in Sources */,
 				819034181F2AE25900E0BBFD /* HomeTableViewCell.m in Sources */,
 				8106EF8F1F16151300FC82BB /* HavenScrollView.m in Sources */,
 				81AF0CE91F1C61CA008CE9A7 /* TabBarItem.m in Sources */,
@@ -1363,6 +1443,7 @@
 				81AF0CE61F1C61BB008CE9A7 /* TabBar.m in Sources */,
 				8106EF8B1F1614C700FC82BB /* HavenActionSheet.m in Sources */,
 				811AF4EE1F53C5E600360195 /* LJCollectionViewFlowLayout.m in Sources */,
+				22BF6AE61F57AE11006E46E0 /* OvalProgress.m in Sources */,
 				81D20D851F43CCBF00590720 /* HavenHeaderView.m in Sources */,
 				8106EF931F1618D000FC82BB /* SpeechSynthesizerTool.m in Sources */,
 				81A1C7971F417C2400FFA446 /* BaseTableView.m in Sources */,
